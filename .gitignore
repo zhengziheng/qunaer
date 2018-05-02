@@ -12,3 +12,4 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+src/pages/home/components/123.vue
