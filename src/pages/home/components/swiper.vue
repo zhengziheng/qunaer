@@ -1,8 +1,8 @@
 <!-- 首页的轮播图组件 -->
 <template>
 <div class="wrapper">
-  <swiper :options="swiperOption" >
-    <swiper-slide v-for="item in swiperList" :key="item.id">
+  <swiper :options="swiperOption" v-if="list.length">
+    <swiper-slide v-for="item in list" :key="item.id">
         <img  class="swiper-img" :src="item.imgUrl" alt="">
     </swiper-slide>
 
@@ -14,25 +14,17 @@
 <script>
 export default {
 name:'HomeSwiper',
+props:{
+list:{
+  type:Array, 
+}
+},
   data () {
     return {
         swiperOption: {
           pagination:'.swiper-pagination',
           loop:true,
         },
-        swiperList:[{
-          id:'0001',
-          imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/fa/1932440360b42e02.jpg_640x200_07b74613.jpg'
-        },
-        {
-          id:'0002',
-          imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/eb/f3d2fa5308fd5f02.jpg_640x200_4f36f53a.jpg'
-        },
-        {
-          id:'0003',
-          imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/f7/a1306242ecc0202.jpg_640x200_294049d2.jpg'
-        }
-        ]
     };
   },
 
