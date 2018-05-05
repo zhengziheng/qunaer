@@ -1,13 +1,7 @@
 <!-- 字母表组件 -->
 <template>
   <div class="list">
-    <span class="item">A</span>
-    <span class="item">A</span>
-    <span class="item">A</span>
-    <span class="item">A</span>
-    <span class="item">A</span>
-    <span class="item">A</span>
-    <span class="item">A</span>
+    <span class="item" v-for="(item,key) in cities" :key="key">{{key}}</span>
   </div>
 </template>
 
@@ -20,7 +14,9 @@ name:'CityAlphabet',
     };
   },
 
-props:{},
+props:{
+  cities:Object,
+},
   components: {},
 
   computed: {},
