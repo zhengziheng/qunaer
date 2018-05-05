@@ -1,10 +1,14 @@
 <!-- 城市列表组件 -->
 <template>
-    <city-header></city-header>
+    <div>
+      <city-header></city-header>
+      <city-search></city-search>
+    </div>
 </template>
 
 <script>
 import CityHeader from './components/Header'
+import CitySearch from './components/Search'
 export default {
 name:'City',
 
@@ -16,6 +20,7 @@ name:'City',
 props:{},
   components: {
     CityHeader,
+    CitySearch,
   },
 
   computed: {},
