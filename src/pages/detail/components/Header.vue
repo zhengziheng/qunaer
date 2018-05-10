@@ -37,6 +37,9 @@ name:'DetailHeader',
 activated(){
   window.addEventListener('scroll',this.handleScroll)
 },
+deactivated(){
+  window.removeEventListener('scroll',this.handleScroll)
+},
 props:{},
   components: {},
 
